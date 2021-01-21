@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Danngn_Jiin3</title>
+        <link rel="stylesheet" href="./reset.css">
+    <style>
+       .container {
+            position: relative;
+            color: #212529;
+            font-family: "Noto Sans KR", AppleSDGothicNeo, "Apple SD Gothic Neo", AppleSDGothicNeo-Light, HelveticaNeue-Light, "Malgun Gothic", "맑은 고딕", sans-serif;
+            font-weight: 400;
+            min-height: 100%;
+        }
+        #fixed-bar {
+            width: 100%;
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+        }
+        #fixed-bar-wrap {
+            width: 1024px;
+            margin: 0 auto;
+            padding: 16px 0;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+        }
+        #fixed-bar-wrap .left {
+            display: flex;
+        }
+        .fixed-bar-box-shadow {
+            box-sizing: border-box;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+        }
+        #fixed-bar-search{
+            border-radius: 5px;
+            border: solid 1px #e9ecef;
+            padding: 0 1.6rem;
+            margin-left: 35px;
+            height: 40px;
+            box-sizing: border-box;
+        }
+        #header-search-button {
+            border: 0;
+            background-color: transparent;
+        }
+        #header-search-input {
+            width: 340px;
+            border: none;
+            text-align: left;
+            padding: 0;
+            margin: 0;
+            font-size: 16px;
+            color: #414346;
+            background-color: transparent;
+        }
+        .fixed-search-icon {
+            height: 100%;
+            margin-top: 3px;
+        }
+        #fixed-bar-download {
+            display: flex;
+        }
+        #fixed-bar-download a {
+            display: flex;
+            align-items: center;
+            border: 1px solid#e9ecef;
+            border-radius: 6px;
+            height: 40px;
+            padding: 0px 15px;
+            margin: 0px 6px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: #000000;
+        }
+        #fixed-bar-download a img {
+            margin-right: 8px;
+        }
+        #home-main-section-top {
+            height: 760px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FBF7F2;
+            padding-top: 74px;
+        }
+        #home-main-section-top2 #home-main-section-top5 {
+            height: 760px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #Ffffff;
+        }
+        #home-main-section-top3 {
+            height: 760px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #e7f5e3;
+        }
+        #home-main-section-bottom {
+            height: 1150px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #f4f7fa;
+        }
+        #home-main-section-final {
+            height: 160px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #ffffff;
+        }
+        #footer {
+            display: block;
+            height: 500px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #4b4955;
+            color: #Ffffff;
+            padding: 70px 0;
+        }
+        #home-main-top {
+            position: relative;
+            width: 1024px;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-end;
+            height: 760px;
+        }
+        #home-main-final {
+            position: relative;
+            width: 1024px;
+            margin: 10px auto 100px auto;
+            display: flex;
+            align-items: center;
+            height: 120px
+        }
+        .footer-container {
+            width: 1024px;
+            margin: 0 auto;
+        }
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4rem;
+        }
+        .footer-list {
+            font-weight: 700;
+            line-height: 2;
+        }
+        .home-main-desc {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-width: 320px;
+        }
+        .home-main-desc2 {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 590px;
+            min-width: 400px;
+        }
+        .home-main-desc3 {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-width: 320px;
+        }
+        .home-main-desc5 {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 590px;
+            min-width: 400px;
+        }
+        .home-main-desc6 {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-width: 400px;
+        }
+        .home-main-desc7 {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            min-width: 400px;
+        }
+        .home-main-desc .title {
+            font-size: 50px;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.3px;
+            margin-bottom: 16px;
+        }
+        .home-main-desc2 .title {
+            font-size: 50px;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.3px;
+            margin-bottom: 16px;
+        }
+        .home-main-desc3 .title {
+            font-size: 50px;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.3px;
+            margin-bottom: 16px;
+        }
+        .home-main-desc4 .title {
+            font-size: 50px;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.3px;
+            margin-bottom: 16px;
+        }
+        .home-main-desc5 .title {
+            font-size: 50px;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.3px;
+            margin-bottom: 16px;
+        }
+        .home-main-desc6 .title {
+            font-size: 50px;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.3px;
+            margin-top: 70px;
+            margin-bottom: 16px;
+        }
+        .text-m {
+            font-size: 19px;
+            line-height: 1.4;
+            letter-spacing: -0.3px;
+        }
+        #home-main-image-top {
+            position: absolute;
+            right: -84px;
+            bottom: 0;
+            width: 804px;
+            height: 685px;
+            display: flex;
+        }
+        #home-main-image-top2 {
+            position: absolute;
+            right: 500px;
+            bottom: 0;
+            width: 532px;
+            height: 684px;
+            display: flex;
+        } 
+        #home-main-image-top3 {
+            position: absolute;
+            right: -84px;
+            bottom: 0;
+            width: 50%;
+            display: flex;
+        } 
+        #home-main-image-top5 {
+            position: absolute;
+            right: 500px;
+            bottom: 0;
+            width: 532px;
+            display: flex;
+        } 
+        #home-main-image-top img {
+            width: 100%;
+        }
+        #home-main-image-top2 img {
+            width: 100%;
+        }
+        #home-main-image-top3 img {
+            width: 100%;
+        }
+        #home-main-image-top5 img {
+            width: 100%;
+        }
+        #home-main-image-top6 img {
+            border-radius: 4mm;
+            margin-bottom: 13px;
+            width: 100%
+        }
+        #button-second {
+            display: flex;
+            justify-content: space-between;
+        }
+        #button-second a {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            padding: 0 22px;
+            border: none;
+            border-radius: 6px;
+            height: 60px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            color:black;
+            background-color: #eeeff0;
+        }
+        #button-third {
+            display: flex;
+            justify-content: space-between;
+        }
+        #button-third a {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            padding: 0 22px;
+            border: none;
+            border-radius: 6px;
+            height: 60px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            color:black;
+            background-color: #eeeff0;
+        }
+        #button-fourth {
+            display: flex;
+            justify-content: space-between;
+        }
+        #button-fourth a {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            padding: 0 22px;
+            border: none;
+            border-radius: 6px;
+            height: 60px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            color:black;
+            background-color: #eeeff0;
+        }
+        .button-bottom{
+            display: flex;
+            align-items: center;
+            margin-top: 180px;
+            border: none;
+            text-decoration: underline;
+            font-size: 20px;
+            font-weight: bold;
+            color:black;
+        }
+        .button-final{
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            border: none;
+            text-decoration: underline;
+            font-size: 20px;
+            font-weight: bold;
+            color:black;
+        }
+        .popular-button {
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1.47;
+            letter-spacing: -0.3px;
+        }
+        .trust-button {
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1.47;
+            letter-spacing: -0.3px;
+        }
+        .icon-list {
+            margin-top: 50px;
+            padding: 0;
+            width: 530px;
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+        }
+        .list-title {
+            margin: 18px 0;
+            font-size: 17px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+        .list-contents {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.5;
+            letter-spacing: -0.3px;
+        }
+        .cat-list {
+            margin-top: 50px;
+            padding: 0;
+            width: 1024px;
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+        }
+        .container2 {
+            margin-top: 80px;
+            display: grid;
+            row-gap: 170px;
+            column-gap: 65px;
+            grid-template-columns: 200px 200px 200px 200px;
+            grid-template-rows: 200px 200px;
+        }
+        .price {
+            margin-bottom: 2px;
+            font-size: 19px;
+            font-weight: 800;
+            line-height: 1.4;
+            letter-spacing: -0.3px;
+        }
+        .cat-title {
+            font-size: 19px;
+            font-weight: 800;
+            line-height: 1.4;
+            letter-spacing: -0.3px;
+        }
+        .place {
+            margin-bottom: 4px;
+            font-size: 14px;
+            line-height: 1.4;
+            letter-spacing: -0.3px;
+        }
+        .interest {
+            font-size: 13px;
+            color: #616161;
+            line-height: 1.4;
+            letter-spacing: -0.3px;
+        }
+    </style>
+  </head>
+  <body class="container">
+            <header id="fixed-bar" class="fixed-bar-box-shadow">
+                <div id="fixed-bar-wrap">
+                    <div class="left">
+                        <h1 id="fixed-bar-logo-title">
+                            <a href="https://www.daangn.com/">
+                                <img class="fixed-logo" src="logo.svg"/>
+                            </a>
+                        </h1>
+                        <section id="fixed-bar-search">
+                            <div class="search-input-wrap">
+                                <input type="text" name="header-search-input" id="header-search-input" class="fixed-search-input" placeholder="검색해보시오~^">
+                                <button id="header-search-button">
+                                    <img class="fixed-search-icon" src="search.svg">
+                                </button>
+                            </div>
+                        </section>
+                    </div>
+                    <section id="fixed-bar-download">
+                        <a target="_blank" class="fixed-download-button" id="header-download-button-ios" href="https://apps.apple.com/kr/app/pangyojangteo/id1018769995?l=ko&ls=1">
+                            <img class="fixed-apple-store" alt="App Store" src="apple.svg">
+                            <div class="fixed-download-text">App Store</div>
+                        </a>
+                        <a target="_blank" class="fixed-download-button" id="header-download-button-android" href="https://play.google.com/store/apps/details?id=com.towneers.www">
+                            <img class="fixed-google-play" alt="App Store" src="google.svg">
+                            <div class="fixed-download-text">Google Play</div>
+                        </a>
+                    </section>
+                </div>
+            </header>
+            <section id="home-main-section-top">
+                <div id="home-main-top">
+                    <div class="home-main-desc">
+                        <h1 class="title">
+                            당신 근처의
+                            <br>
+                            고양이 야옹
+                        </h1>
+                        <p class="text-m">
+                            중고 거래부터 동네 정보까지, 이웃과 함께 해요.
+                            <br>
+                            가볍고 따뜻한 당신의 근처를 만들어요.
+                        </p>
+                    </div>
+                    <div id="home-main-image-top">
+                        <img src=1.png>
+                    </div>
+                </div>
+            </section>
+            <section id="home-main-section-top2">
+                <div id="home-main-top">
+                    <div class="home-main-desc2">
+                        <h1 class="title">
+                            우리 동네
+                            <br>
+                            귀여운 고양이 모음
+                        </h1>
+                        <p class="text-m">
+                            동네 주민들과 가깝고 따뜻한 거래를 지금 경험해보세요.
+                        </p>
+                        <section id="button-second">
+                            <a target="_blank" class="popular-button">
+                                <div class="fixed-download-text">인기매물 보기</div>
+                            </a>
+                            <a target="_blank" class="trust-botton">
+                                <div class="fixed-download-text">믿을 수 있는 중고거래</div>
+                            </a>
+                        </section>
+                    </div>
+                    <div id="home-main-image-top2">
+                        <img src=2.png>
+                    </div>
+                </div>
+            </section>
+            <section id="home-main-section-top3">
+                <div id="home-main-top">
+                    <div class="home-main-desc3">
+                        <h1 class="title">
+                            이웃과 함께 하는
+                            <br>
+                            고양이 산책
+                        </h1>
+                        <p class="text-m">
+                            우리 동네의 다양한 이야기를 이웃과 함께 나누어요
+                        </p>
+                        <div class="home-main-desc4">
+                            <ul class="icon-list">
+                                <li class="icon-list-item">
+                                    <img src=icon-house.svg>
+                                    <div class="list-title">우리동네질문</div>
+                                    <div class="list-contents">
+                                        궁금한 게 있을 땐
+                                        <br>
+                                        이웃에게 물어보세요.
+                                    </div>
+                                </li>
+                                <li class="icon-list-item">
+                                    <img src=icon-paper.svg>
+                                    <div class="list-title">동네분실센터</div>
+                                    <div class="list-contents">
+                                        무언가를 잃어버렸을 때,
+                                        <br>
+                                        함께 찾을 수 있어요.
+                                    </div>
+                                </li>
+                                <li class="icon-list-item">
+                                    <img src=icon-chat.svg>
+                                    <div class="list-title">동네모임</div>
+                                    <div class="list-contents">
+                                        관심사가 비슷한 이웃과
+                                        <br>
+                                        온오프라인으로 만나요.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <div id="home-main-image-top3">
+                        <img src=3.png>
+                    </div>
+                </div>
+            </section>
+            <section id="home-main-section-top5">
+                <div id="home-main-top">
+                    <div class="home-main-desc5">
+                        <h1 class="title">
+                            내 근처에서 찾는
+                            <br>
+                            가까운 고양이
+                        </h1>
+                        <p class="text-m">
+                            우리 동네 가게를 찾고 있나요?
+                            <br>
+                            동네 주민이 남긴 진짜 후기를 함께 확인해보세요!
+                        </p>
+                        <section id="button-fourth">
+                            <a target="_blank" class="find-button">
+                                <div class="fixed-download-text">당근마켓 동네에서 찾기</div>
+                            </a>
+                        </section>
+                    </div>
+                    <div id="home-main-image-top5">
+                        <img src=4.png>
+                    </div>
+                </div>
+            </section>
+            <section id="home-main-section-bottom">
+                    <div class="home-main-top">
+                        <div class="home-main-desc6">
+                            <h1 class="title">
+                                우리동네 인기 깨순이
+                            </h1>
+                            <div class="container2">
+                                <div class="item">
+                                    <div id="home-main-image-top6">
+                                        <img src="5.png">
+                                    </div>
+                                    <p class="text-m">
+                                          삼색이 고양이 1일 돌보기
+                                    </p>
+                                    <p class="price">
+                                          50,000원
+                                    </p>
+                                    <p class="place">
+                                         서울시 송파구 방이동
+                                    </p>
+                                    <p class="interest">
+                                         ❤️관심 9 · 💬채팅 23
+                                    </p>
+                                </div>
+                                <div class="item">
+                                    <div id="home-main-image-top6">
+                                        <img src="5.png">
+                                    </div>
+                                    <p class="text-m">
+                                          삼색이 고양이 1일 돌보기
+                                    </p>
+                                    <p class="price">
+                                          50,000원
+                                    </p>
+                                    <p class="place">
+                                         서울시 송파구 방이동
+                                    </p>
+                                    <p class="interest">
+                                         ❤️관심 9 · 💬채팅 23
+                                    </p>
+                                </div>
+                                <div class="item">
+                                    <div id="home-main-image-top6">
+                                        <img src="5.png">
+                                    </div>
+                                    <p class="text-m">
+                                          삼색이 고양이 1일 돌보기
+                                    </p>
+                                    <p class="price">
+                                          50,000원
+                                    </p>
+                                    <p class="place">
+                                         서울시 송파구 방이동
+                                    </p>
+                                    <p class="interest">
+                                         ❤️관심 9 · 💬채팅 23
+                                    </p>
+                                </div>
+                                <div class="item">
+                                    <div id="home-main-image-top6">
+                                        <img src="5.png">
+                                    </div>
+                                    <p class="text-m">
+                                          삼색이 고양이 1일 돌보기
+                                    </p>
+                                    <p class="price">
+                                          50,000원
+                                    </p>
+                                    <p class="place">
+                                         서울시 송파구 방이동
+                                    </p>
+                                    <p class="interest">
+                                         ❤️관심 9 · 💬채팅 23
+                                    </p>
+                                </div>
+                                <div class="item">
+                                    <div id="home-main-image-top6">
+                                        <img src="5.png">
+                                    </div>
+                                    <p class="text-m">
+                                          삼색이 고양이 1일 돌보기
+                                    </p>
+                                    <p class="price">
+                                          50,000원
+                                    </p>
+                                    <p class="place">
+                                         서울시 송파구 방이동
+                                    </p>
+                                    <p class="interest">
+                                         ❤️관심 9 · 💬채팅 23
+                                    </p>
+                                </div>
+                                <div class="item">
+                                    <div id="home-main-image-top6">
+                                        <img src="5.png">
+                                    </div>
+                                    <p class="text-m">
+                                          삼색이 고양이 1일 돌보기
+                                    </p>
+                                    <p class="price">
+                                          50,000원
+                                    </p>
+                                    <p class="place">
+                                         서울시 송파구 방이동
+                                    </p>
+                                    <p class="interest">
+                                         ❤️관심 9 · 💬채팅 23
+                                    </p>
+                                </div>
+                                <div class="item">
+                                    <div id="home-main-image-top6">
+                                        <img src="5.png">
+                                    </div>
+                                    <p class="text-m">
+                                          삼색이 고양이 1일 돌보기
+                                    </p>
+                                    <p class="price">
+                                          50,000원
+                                    </p>
+                                    <p class="place">
+                                         서울시 송파구 방이동
+                                    </p>
+                                    <p class="interest">
+                                         ❤️관심 9 · 💬채팅 23
+                                    </p>
+                                </div>
+                                <div class="item">
+                                    <div id="home-main-image-top6">
+                                        <img src="5.png">
+                                    </div>
+                                    <p class="text-m">
+                                          삼색이 고양이 1일 돌보기
+                                    </p>
+                                    <p class="price">
+                                          50,000원
+                                    </p>
+                                    <p class="place">
+                                         서울시 송파구 방이동
+                                    </p>
+                                    <p class="interest">
+                                         ❤️관심 9 · 💬채팅 23
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="button-bottom">
+                                <div class="price">인기 고양이 더 보기</div>
+                            </div>
+                    </div>
+            </section>
+            <section id="home-main-section-final">
+                <div id="home-main-final">
+                    <div class="home-main-desc7">
+                        <div class="button-final">
+                            <div class="cat-title">중고거래 인기검색어</div>
+                        </div>
+                        <ul class="cat-list">
+                            <li class="cat">
+                                <div class="cat-content">
+                                    고양이
+                                </div>
+                            </li>
+                            <li class="cat">
+                                <div class="cat-content">
+                                    고양이
+                                </div>
+                            </li>
+                            <li class="cat">
+                                <div class="cat-content">
+                                    고양이
+                                </div>
+                            </li>
+                            <li class="cat">
+                                <div class="cat-content">
+                                    고양이
+                                </div>
+                            </li>
+                            <li class="cat">
+                                <div class="cat-content">
+                                    고양이
+                                </div>
+                            </li>
+                            <li class="cat">
+                                <div class="cat-content">
+                                    고양이
+                                </div>
+                            </li>
+                            <li class="cat">
+                                <div class="cat-content">
+                                    고양이
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <footer id="footer">
+                <div class="footer-container">
+                    <div class="footer-top">
+                        <div class="footer-logo">
+                            <img src="https://d1unjqcospf8gs.cloudfront.net/assets/home/base/footer/logo-a4f4848ffd1d5fcb13d1d3ecf82ffbc77c31ebe226f67097386497a34638c059.svg">
+                        </div>
+                        <ul class="footer-list">
+                            <li class="footer-list-item">
+                            <a class="link-highlight">믿을 수 있는 중고거래</a>
+                            </li>
+                            <li class="footer-list-item">
+                                <a class="link-highlight">자주 묻는 질문</a>
+                            </li>
+                        </ul>
+                        <ul class="footer-list">
+                            <li class="footer-list-item">
+                                <a class="link-highlight">회사 소개</a>
+                            </li>
+                            <li class="footer-list-item">
+                                <a class="link-highlight">광고주센터</a>
+                            </li>
+                            <li class="footer-list-item">
+                                <a class="link-highlight">동네가게</a>
+                            </li>
+                        </ul>
+                        <ul class="footer-list">
+                            <li class="footer-list-item">
+                                <a class="link-highlight">이용약관</a>
+                            </li>
+                            <li class="footer-list-item">
+                                <a class="link-highlight">개인정보처리방침</a>
+                            </li>
+                            <li class="footer-list-item">
+                                <a class="link-highlight">위치기반서비스 이용약관</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+    </body>
+</html>

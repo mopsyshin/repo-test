@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Danngn_DJ</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+       .container {
+            position: relative;
+            color: #212529;
+            font-family: "Noto Sans KR", AppleSDGothicNeo, "Apple SD Gothic Neo", AppleSDGothicNeo-Light, HelveticaNeue-Light, "Malgun Gothic", "맑은 고딕", sans-serif;
+            font-weight: 400;
+            min-height: 100%;
+        }
+        #fixed-bar {
+            width: 100%;
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+        }
+        #fixed-bar-wrap {
+            width: 1024px;
+            margin: 0 auto;
+            padding: 16px 0;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+        }
+        #fixed-bar-wrap .left {
+            display: flex;
+        }
+        .fixed-bar-box-shadow {
+            box-sizing: border-box;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+        }
+        #fixed-bar-download {
+            display: flex;
+        }
+        #fixed-bar-download a {
+            display: flex;
+            align-items: center;
+            border: 1px solid #f0f0f0;
+            height: 40px;
+            padding: 0px 16px;
+            margin: 0px 8px;
+            text-decoration: none;
+            color: black;
+        }
+        #fixed-bar-download a img {
+            margin-right: 8px;
+        }
+        #home-main-section-top {
+            height: 760px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #FBF7F2;
+            padding-top: 74px;
+        }
+
+        #home-main-top {
+            position: relative;
+            width: 1024px;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-end;
+            height: 760px;
+        }
+        .home-main-desc {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-width: 320px;
+        }
+        .home-main-desc .title {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        #home-main-image-top {
+            position: absolute;
+            width: 804px;
+            height: 685px;
+            bottom: 0px;
+            right: -80px;
+            display: flex;
+        }
+        #home-main-image-top img {
+            width: 100%;
+        }
+    </style>
+  </head>
+  <body class="container">
+            <header id="fixed-bar" class="fixed-bar-box-shadow">
+                <div id="fixed-bar-wrap">
+                    <div class="left">
+                        <h1 id="fixed-bar-logo-title">
+                            <a href="https://www.daangn.com/">
+                                <img class="fixed-logo" alt="당근마켓" src="logo.svg"/>
+                            </a>
+                        </h1>
+                        <section id="fixed-bar-search">
+                            <div class="search-input-wrap">
+                                <input type="text" name="header-search-input" id="header-search-input" class="fixed-search-input" placeholder="검색해보시오~^">
+                                <button id="header-search-button">
+                                    <img class="fixed-search-icon" alt="Search" src="search.svg">
+                                </button>
+                            </div>
+                        </section>
+                    </div>
+                    <section id="fixed-bar-download">
+                        <a target="_blank" class="fixed-download-button" id="header-download-button-ios" href="https://apps.apple.com/kr/app/pangyojangteo/id1018769995?l=ko&ls=1">
+                            <img class="fixed-apple-store" alt="App Store" src="apple.svg">
+                            <div class="fixed-download-text">App Store</div>
+                        </a>
+                        <a target="_blank" class="fixed-download-button" id="header-download-button-android" href="https://play.google.com/store/apps/details?id=com.towneers.www">
+                            <img class="fixed-google-play" alt="App Store" src="google.svg">
+                            <div class="fixed-download-text">Google Play</div>
+                        </a>
+                    </section>
+                </div>
+            </header>
+            <section id="home-main-section-top" class="background-pale-peach">
+                <div id="home-main-top">
+                    <div class="home-main-desc">
+                        <h1 class="title">
+                            당신 근처의
+                            <br>
+                            당근마켓
+                        </h1>
+                        <p class="text-m">
+                            중고 거래부터 동네 정보까지, 이웃과 함께 해요.
+                            <br>
+                            가볍고 따뜻한 당신의 근처를 만들어요.
+                        </p>
+                    </div>
+                    <div id="home-main-image-top">
+                        <img src=1.png>
+                    </div>
+                </div>
+            </section>
+            <section id="home-main-section-top2">
+                <div id="home-main-top">
+                    <div class="home-main-desc">
+                        <h1 class="home-main-title">
+                            우리 동네
+                            <br>
+                            중고 직거래 마켓
+                        </h1>
+                        <p class="text-m">
+                            동네 주민들과 가깝고 따뜻한 거래를 지금 경험해보세요.
+                        </p>
+                    </div>
+                    <div id="home-main-image-top">
+                    </div>
+                </div>
+            </section>
+    </body>
+</html>
